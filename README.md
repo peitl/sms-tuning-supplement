@@ -1,7 +1,26 @@
 # Documentation
 
-Refer to SMS documentation at <https://sat-modulo-symmetries.readthedocs.io/> for installation instructions.
-Additionally build `march_cu` in the `march_cu` subdirectory and put it on `$PATH`.
+Build SMS by running
+
+```bash
+./build-and-install.sh
+```
+
+Refer to SMS documentation at <https://sat-modulo-symmetries.readthedocs.io/> for detailed installation instructions and options.
+
+Additionally build `march_cu` in the `march_cu` subdirectory 
+
+```bash
+cd march_cu
+make
+```
+
+And put the `march_cu` binary somwhere on `$PATH`, by running something like:
+
+```bash
+cp march_cu ~/.local/bin/
+```
+
 
 ## command lines generating default cubes with default cubers:
 ```bash
