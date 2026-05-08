@@ -15,7 +15,7 @@ cd march_cu
 make
 ```
 
-And put the `march_cu` binary somwhere on `$PATH`, by running something like:
+And put the `march_cu` binary somewhere on `$PATH`, by running something like:
 
 ```bash
 cp march_cu ~/.local/bin/
@@ -25,7 +25,7 @@ cp march_cu ~/.local/bin/
 ## command lines generating default cubes with default cubers:
 ```bash
 cubers: `sms-def`, `sms-la-all`, `sms-la-edge` and `march`;
-problem_name: `kochen-specker`, `traingle-free`, and `murty-simon`;
+problem_name: `kochen-specker`, `triangle-free`, and `murty-simon`;
 prerun: `600`
 bash ./cube-tool.sh --$problem_name -v $number_of_vertex --prerun-time $prerun -b $cuber --reuse-learned-clauses
 ```
@@ -35,12 +35,16 @@ bash ./cube-tool.sh --$problem_name -v $number_of_vertex --prerun-time $prerun -
 cubers: `sms-def`, `sms-la-all`, `sms-la-edge` and `march`;
 problem_name: `kochen-spcher`, `traingle-free`, and `murty-simon`;
 prerun: `600`
-march_function (index of the scoring functions): 1 kochen specker, 12 for traingle free and murty simon problems
-the paramters bin, dec, min, max of march can be set accordingly
+march_function (index of the scoring functions): 1 Kochen Specker, 12 for triangle-free and Murty Simon problems
+The parameters bin, dec, min, and max of March can be set accordingly
 bash ./cube-tool.sh --$problem_name -v $number_of_vertex --prerun-time $prerun -b $cuber --reuse-learned-clauses --py /home1/hxia/software/python_auto_cubing/bin/python --cube-args -bin $march_bin_value -dec $march_dec_value -min $march_min_value -max $march_max_value -f $march_function --
 ```
 
-## solving the cubes of best configurations
+## scoring functions recommended from the LLM
+
+The recommendation archive is [here](https://chatgpt.com/share/68fb387a-7bf4-8005-ba57-57f116810f4d).
+
+## solving the cubes of the best configurations
 best parameters for KS:
 --cutoff 199693 --frequency 282 --cadical-config block=true bump=true forcephase=true stabilize=true blockmaxclslim=4674994 blockminclslim=991 bumpreasondepth=2 stabilizefactor=57471588 stabilizemaxint=99796564 stabilizeonly=true
 
